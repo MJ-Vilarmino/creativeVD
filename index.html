@@ -21,7 +21,7 @@
                     <h2>Creative <span>Visual</span> Designs</h2>
                 </div>
 
-                <nav>
+                <nav class="nav">
                     <ul>
                         <li><a href="home.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
@@ -106,7 +106,7 @@
                 <div class="aboutMe__content">
                     <h3>About Me</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum neque facere veritatis. Quasi ratione voluptate nihil ad atque modi sint eveniet adipisci recusandae ab fuga expedita pariatur eligendi dolore necessitatibus ut tempora iusto, nisi doloribus quae provident optio. Consequuntur, nisi rem.
-                    </p>
+                    </p> <br>
                     <p>
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis fugit minus modi iure blanditiis, et id nobis quas explicabo nihil labore corporis cum tempora corrupti impedit eius repellendus doloribus voluptatibus nesciunt iusto quis quisquam.
                     </p>
@@ -179,6 +179,16 @@
             </div>
         </div>
     </section>
+
+    <script>
+        const nav = document.querySelector(".nav");
+        const toggleMenu = document.querySelector(".toggle__menu");
+
+        toggleMenu.addEventListener("click", ()=>{
+            toggleMenu.classList.toggle("open");
+            nav.classList.toggle("open");
+        });
+    </script>
 
 </body>
 </html>
