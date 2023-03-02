@@ -46,6 +46,8 @@ header span {
 /* This is header CSS*/
 .header {
     background-color: var(--black);
+    border-bottom-style: groove;
+    border-bottom-color: black;
     padding: 1rem 0;
     position: fixed;
     width: 100%;
@@ -90,14 +92,16 @@ nav ul li a:hover {
     width: 2rem;
     margin-bottom: 0.4rem;
     border-radius: 0.5rem;
+    
 }
 
 @media (max-width: 768px){
     .toggle__menu {
         display: block;
+    
     }
     nav.open ul {
-        right: 0;
+        right: -50%;
         transition: 0.5s ease-in;
     }
     nav ul {
@@ -106,7 +110,7 @@ nav ul li a:hover {
         right: -100%;
         top: 6.5rem;
         width: 100%;
-        height: 100%;
+        height: 100%vh;
         background-color: var(--white);
         text-align: left;
         transition: 0.5s ease-in;
@@ -117,14 +121,25 @@ nav ul li a:hover {
         padding: 1rem;
         border-bottom: 1px solid #dbd8d8;
     }
-    
     nav ul li:hover {
         background-color: var(--primary);
     }
-    
     nav ul li:hover a{
         color: var(--white);
     }
+    .toggle__menu.open span:nth-child(1){
+        transition: 0.5s ease;
+        transform:  translate(-2px, 7.3px) rotate(45deg);
+    }
+    .toggle__menu.open span:nth-child(2){
+        opacity: 0;
+        transition: 0s;
+    }
+    .toggle__menu.open span:nth-child(3){
+        transition: 0.5s ease;
+        transform:  translate(-2px, -12.3px) rotate(-45deg);
+    }
+
 }
 
 
@@ -135,13 +150,23 @@ nav ul li a:hover {
 /* This is Banner CSS*/
 
 .banner {
-    padding: 6rem 0;
+    padding: 10rem 0;
+
 }
 
 .banner__wrapper {
     display: flex;
     align-items: center;
     gap: 4rem;
+}
+
+@media (max-width: 998px){
+    .banner__wrapper {
+        flex-direction: column;
+    }
+    .banner__img {
+        width: 100% !important;
+    }
 }
 
 .banner img {
@@ -169,7 +194,7 @@ nav ul li a:hover {
 
 .banner__content h1{
     color: var(--primary);
-    font-size: 5rem;
+    font-size: clamp(4rem, 7vw, 5rem);
     line-height: 1;
     margin-bottom: 2rem;
 }
@@ -376,7 +401,9 @@ nav ul li a:hover {
 /* This is About Me Page banner */
 
 .banner__aboutMe{
-    padding: 3rem 0;
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+    
 }
 
 .aboutmePage__wrapper {
@@ -490,7 +517,8 @@ nav ul li a:hover {
 /*This is the start of Services banner */
 
 .servicesBanner {
-    padding: 4rem 0;
+    padding-top: 10rem;
+    padding-bottom: 5rem;
 }
 
 .servicesBanner__wrapper {
@@ -597,36 +625,135 @@ nav ul li a:hover {
 
 /*This is the ned of Services Social Media */
 
+/*This is the start of Updates */
 
-/*This is the start of Contact Page banner */
-
-.contactPage {
-    background-color: var(--black);
-    border-top-style: groove;
-    border-top-color: black;
-    border-bottom-style: groove;
-    border-bottom-color: white;
-    color: var(--white);
-    padding: 3rem 0;
+.updates__banner {
+    padding-top: 10rem;
+    padding-bottom: 5rem;
 }
 
-.contactPage p {
-    margin-bottom: 3rem;
-}
-
-.contactPage ul li {
-    font-size: 1.3rem;
-    list-style: none;
-    margin-bottom: 2rem;
-}
-
-.contactPage__wrapper ul li a{
+.updates__banner h2{
+    font-size: 2.5rem;
     color: var(--primary);
 }
 
-.second__icons ul{
+.updates__wrapper {
+    display: flex;
+}
+
+.updates__wrapper img {
+    margin-top: 6rem;
+}
+
+.updates__wrapper h3 {
+    margin-bottom: 2rem;
+}
+
+.updates__wrapper p {
+    margin-bottom: 1.5rem;
+}
+
+.updates__wrapper p {
+    margin-bottom: 1.5rem;
+}
+
+.updates__content a {
+    text-decoration: none;
+    color: var(--primary);
+}
+
+
+.inner__contents ul {
+    display: flex; 
+    text-align: center;
+    margin-top: 0.7rem;
+    margin-bottom: 1rem;
+}
+
+.inner__contents ul p {
+    display: flex; 
+    text-align: center;
+    margin-left: 0.5rem;
+    margin-right: 2.5rem;
+}
+
+.inner__contents ul li {
+    display: flex;
+
+}
+
+
+
+
+/*This is the end of Updates */
+
+
+/*This is the start of Contact Page banner */
+
+.contactUs{
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+    background-color: var(--black);
+    border-bottom-style: groove;
+    border-bottom-color: white;
+    color: var(--primary);
+}
+
+.contactUs h2{
+    color: var(--primary);
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.contactUs p{
+    color: var(--white);
+    margin-bottom: 1rem;
+    
+}
+.contactUs__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5rem;
+    text-align: end;
+    justify-content: space-between;
+}
+
+.contactUs__wrapper ul{
+    list-style: none;
+}
+
+.contactUs__info ul li{
+    list-style: none;
+    display: flex;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+    text-align: left;
+}
+
+.contactUs__info ul{
+    list-style: none;
+}
+
+.contactUs__info ul p{
+    display: flex;
+    margin-left: 3rem;
+    color: var(--white);
+}
+
+.second__Icons ul{
     display: flex;
     gap: 1rem;
+    
+}
+
+.second__Icons ul li a{
+    display: flex;
+    text-align: justify;
+    justify-content: center;
+    color: var(--white);
+    list-style: none;
+    text-decoration: none;
+    font-size: 1.5rem;
 }
 
 input[type=text], select, textarea {
@@ -654,13 +781,6 @@ input[type=submit]:hover {
     background-color: var(--white);
     color: var(--black);
   }
-
-.contact-text {
-    font: 300 18px 'Lato', sans-serif;
-    padding-left: 2rem;
-    letter-spacing: 1px;
-    color: var(--grey);
-}
 
 
 

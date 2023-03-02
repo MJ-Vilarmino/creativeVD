@@ -19,9 +19,9 @@
                     <h2>Creative <span>Visual</span> Designs</h2>
                 </div>
 
-                <nav>
+                <nav class="nav">
                     <ul>
-                        <li><a href="home.html">Home</a></li>
+                        <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="updates.html">Updates</a></li>
@@ -38,7 +38,88 @@
         </div>
     </header>
 
-    
+    <section class="updates__banner">
+        <div class="container">
+            <h2>Latest Trends</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat, nam.</p>
+            <div class="updates__wrapper">
+                <div class="updates__content">
+                    <img src="./img/trends1.png" alt="">
+                        <div class="inner__contents">
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-user"></i>
+                                <p>Jasen Vilarmino</p>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-calendar-days"></i>
+                                <p>March 2, 2023</p>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-tags"></i>
+                                <p>Web Design | Wireframe</p>
+                            </li>
+                        </ul>
+                        </div>
+                    <h3>Designing Concept</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, nihil ratione cumque ea dolorum doloremque? Maxime vel impedit delectus repellat. Sunt eveniet qui quisquam culpa sit error reprehenderit dicta ea aut ducimus asperiores quas est ullam porro consectetur blanditiis alias incidunt itaque, illum nobis. Ea cum veritatis quidem quis eveniet?
+                    </p>
+                    <a href="#">Read more...</a>
+                </div>
+            </div>
+
+            <div class="updates__wrapper">
+                <div class="updates__content">
+                    <img src="./img/trends2.png" alt="">
+                        <div class="inner__contents">
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-user"></i>
+                                <p>Jasen Vilarmino</p>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-calendar-days"></i>
+                                <p>March 2, 2023</p>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-tags"></i>
+                                <p>Web Design | Wireframe</p>
+                            </li>
+                        </ul>
+                        </div>
+                    <h3>Design to Code</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, nihil ratione cumque ea dolorum doloremque? Maxime vel impedit delectus repellat. Sunt eveniet qui quisquam culpa sit error reprehenderit dicta ea aut ducimus asperiores quas est ullam porro consectetur blanditiis alias incidunt itaque, illum nobis. Ea cum veritatis quidem quis eveniet?
+                    </p>
+                    <a href="#">Read more...</a>
+                </div>
+            </div>
+            <div class="sidebar__categories">
+                <h3>CATEGORIES</h3>
+                <p>Web Design(2)</p>
+                <p>Web Development(3)</p>
+                <p>Wire Frame(1)</p>
+                <p>Vector & Logo(5)</p>
+                <p>Social Media(2)</p>
+            </div>    
+
+            <div class="sidebar__recentpost">
+                <h3>RECENT POST</h3>
+                <img src="./img/post1.png" alt="">
+                <img src="./img/post2.png" alt="">
+                <img src="./img/post3.png" alt="">
+            </div>    
+
+            <div class="sidebar__tags">
+                <h3>TAGS</h3>
+                <p>Web Design(2)</p>
+                <p>Web Development(3)</p>
+                <p>Wire Frame(1)</p>
+                <p>Vector & Logo(5)</p>
+                <p>Social Media(2)</p>
+            </div>   
+        </div>
+    </section>
+
     <section class="contact">
         <div class="container">
             <div class="contact__wrapper">
@@ -69,5 +150,16 @@
             </div>
         </div>
     </section>
+
+    <script>
+        const nav = document.querySelector(".nav");
+        const toggleMenu = document.querySelector(".toggle__menu");
+
+        toggleMenu.addEventListener("click", ()=>{
+            toggleMenu.classList.toggle("open");
+            nav.classList.toggle("open");
+        });
+    </script>
+
 </body>
 </html>

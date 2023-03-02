@@ -20,9 +20,9 @@
                     <h2>Creative <span>Visual</span> Designs</h2>
                 </div>
 
-                <nav>
+                <nav class="nav">
                     <ul>
-                        <li><a href="home.html">Home</a></li>
+                        <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="updates.html">Updates</a></li>
@@ -39,19 +39,29 @@
         </div>
     </header>
 
-    <section class="contactPage">
+
+    <section class="contactUs">
         <div class="container">
-            <h3>Contact</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            <div class="contactPage__wrapper">
-                <div class="contactPage__content">
-                        <ul>
-                            <li><a href="#"><i class="fa-solid fa-phone"> <span class="contact-text number">+ 63 999 433 2218 </span></i></a></li> 
-                            <li><a href="#"><i class="fa-solid fa-envelope"><span class="contact-text email"> inquire@creativevisualdesigns.com </span></i></a></li>  
-                            <li><a href="#"><i class="fa-solid fa-map-pin"> <span class="contact-text location">&nbsp;Baloc road, Brgy. San Ignacio, San Pablo City<br>&nbsp;&nbsp;&emsp; &emsp;Laguna, Philippines 4000 </span></i></a></li>
-                        </ul>  
-                    
-                    <div class="second__icons">
+            <h2>Contact</h2>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+            <div class="contactUs__wrapper">
+                <div class="contactUs__info">
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <p>+63 999 433 2218</p>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <p>inquire@creativevisualdesigns.com</p>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-map-pin"></i>
+                            <p>Baloc road, Brgy. San Ignacio, San Pablo City</p>
+                        </li>
+                    </ul>
+
+                    <div class="second__Icons">
                         <ul>
                             <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
                             <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
@@ -60,16 +70,26 @@
                         </ul>
                     </div>
                 </div>
-            </div>
-            
-            <div class="message__content">
-                <input type="text" id="fname" name="firstname" placeholder="NAME">
-                <input type="text" id="lname" name="lastname" placeholder="EMAIL">
-                <textarea id="subject" name="subject" placeholder="MESSAGE" style="height:200px"></textarea> <br>
-                <input type="submit" value="SEND MESSAGE">
+                    <div class="message__Content">
+                        <input type="text" id="fname" name="firstname" placeholder="NAME">
+                        <input type="text" id="lname" name="lastname" placeholder="EMAIL">
+                        <textarea id="subject" name="subject" placeholder="MESSAGE" style="height:200px"></textarea> <br>
+                        <input type="submit" value="SEND MESSAGE">
+                    </div>
             </div>
         </div>
     </section>
+
+
+    <script>
+        const nav = document.querySelector(".nav");
+        const toggleMenu = document.querySelector(".toggle__menu");
+
+        toggleMenu.addEventListener("click", ()=>{
+            toggleMenu.classList.toggle("open");
+            nav.classList.toggle("open");
+        });
+    </script>
 
     <section class="footer">
         <div class="container">
@@ -88,6 +108,7 @@
             </div>
         </div>
     </section>
+
     
 </body>
 </html>
